@@ -30,6 +30,23 @@ header .studio {
 
 /* Меню */
 
+header .container,
+.menu .list,
+.contacts.list {
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.menu .list {
+  margin-left: 93px;
+  min-width: 294px;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .menu .link {
   line-height: 1.14;
   font-weight: 500;
@@ -58,9 +75,24 @@ header .studio {
   cursor: pointer;
 }
 
+.contacts .mail {
+  margin-left: 331px;
+}
+.contacts .phone {
+  margin-left: 50px;
+}
+
 /* Секция герой */
 
+.section .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .hero-title {
+  max-width: 696px;
+  margin: 0 auto;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -72,9 +104,11 @@ header .studio {
 
 .hero-section {
   background-color: var(--secondary-background);
+  text-align: center;
 }
 
 .hero-section .button {
+  display: inline-block;
   cursor: pointer;
   background-color: var(--accent-color);
   border: none;
@@ -84,6 +118,7 @@ header .studio {
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--white-color);
+  margin-top: 30px;
 }
 
 .hero-section .button:hover,
@@ -96,9 +131,35 @@ header .studio {
 
 /* Преимущества */
 
+.container {
+  padding: 94px 15px;
+}
+
 .section .title {
   font-size: 36px;
   line-height: 1.17;
+  margin-bottom: 50px;
+}
+
+.section .list {
+  display: flex;
+
+  outline: red dotted;
+}
+
+.list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.hero-section .container {
+  padding: 200px 0;
+}
+
+.text {
+  margin-top: 10px;
+}
+.goals .container {
+  padding-bottom: 0;
 }
 
 .goals .text {
@@ -121,20 +182,42 @@ header .studio {
 
 .section.team {
   background-color: var(--third-section);
+  text-align: center;
 }
 
 .team .name {
+  margin-top: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
 }
 
-.team p {
+.team .text {
   font-size: 16px;
   line-height: 1.19;
 }
 
 /* ++++++ Страница портфолио - начало +++++++*/
+
+.list.filter {
+  justify-content: center;
+}
+
+.filter-button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio .container {
+  padding-bottom: 0;
+}
+
+.list.container {
+  padding-top: 50px;
+  padding-bottom: 94px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 .portfolio .button {
   font-size: 16px;
@@ -144,6 +227,7 @@ header .studio {
   border: none;
   border-radius: 4px;
   font-weight: 500;
+  margin: 0;
 }
 
 .portfolio .button:hover {
@@ -151,14 +235,20 @@ header .studio {
   color: var(--white-color);
 }
 
+.container .item:nth-child(-n + 6) {
+  margin-bottom: 30px;
+}
+
 .item .sub_title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
+  margin-left: 24px;
 }
 
-.item > .text {
+.item .text {
+  margin-left: 24px;
   font-size: 16px;
   line-height: 1.88;
 }
@@ -168,8 +258,14 @@ header .studio {
 /* Футер */
 
 footer {
-  padding: 60px 0 60px 215px;
   background-color: var(--secondary-background);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 footer .studio {
@@ -182,6 +278,7 @@ footer .studio {
   font-weight: 400;
   line-height: 1.71;
   color: var(--white-color);
+  margin-top: 20px;
 }
 
 .address .link {
