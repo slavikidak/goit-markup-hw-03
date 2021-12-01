@@ -30,24 +30,37 @@ header .studio {
 
 /* Меню */
 
-header .container,
-.menu .list,
-.contacts.list {
+.header .main-nav {
   display: flex;
   align-items: center;
-  padding-top: 0;
-  padding-bottom: 0;
+}
+
+.menu {
+  margin-left: 93px;
 }
 
 .menu .list {
-  margin-left: 93px;
-  min-width: 294px;
-  justify-content: space-between;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: flex;
+}
+
+.contacts.list {
+  display: flex;
+  margin-left: auto;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.menu .item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .menu .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   line-height: 1.14;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -75,11 +88,8 @@ header .container,
   cursor: pointer;
 }
 
-.contacts .mail {
-  margin-left: 331px;
-}
-.contacts .phone {
-  margin-left: 50px;
+.contacts > .mail {
+  margin-right: 50px;
 }
 
 /* Секция герой */
@@ -103,6 +113,9 @@ header .container,
 }
 
 .hero-section {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--secondary-background);
   text-align: center;
 }
@@ -131,35 +144,32 @@ header .container,
 
 /* Преимущества */
 
-.container {
-  padding: 94px 15px;
+.section.goals {
+  padding-top: 94px;
+  padding-bottom: 0;
 }
 
 .section .title {
+  margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.17;
-  margin-bottom: 50px;
 }
 
 .section .list {
   display: flex;
-
-  outline: red dotted;
 }
 
 .list-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.hero-section .container {
-  padding: 200px 0;
-}
-
 .text {
   margin-top: 10px;
 }
-.goals .container {
-  padding-bottom: 0;
+
+.goals .list-item {
+  width: 270px;
 }
 
 .goals .text {
@@ -172,6 +182,11 @@ header .container,
   text-transform: uppercase;
 }
 
+.section.services {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .services .title,
 .team .title {
   font-weight: 700;
@@ -181,12 +196,19 @@ header .container,
 }
 
 .section.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
   background-color: var(--third-section);
   text-align: center;
 }
 
+.team-member {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .team .name {
-  margin-top: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -199,23 +221,23 @@ header .container,
 
 /* ++++++ Страница портфолио - начало +++++++*/
 
-.list.filter {
-  justify-content: center;
-}
-
 .filter-button:not(:last-child) {
   margin-right: 8px;
 }
 
-.portfolio .container {
-  padding-bottom: 0;
+.section.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.list.container {
-  padding-top: 50px;
-  padding-bottom: 94px;
+.portfolio .filter {
+  justify-content: center;
+}
+
+.portfolio .items {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 50px;
   justify-content: space-around;
 }
 
@@ -235,8 +257,15 @@ header .container,
   color: var(--white-color);
 }
 
-.container .item:nth-child(-n + 6) {
+.portfolio .item:nth-child(-n + 6) {
   margin-bottom: 30px;
+}
+
+.item .description {
+  width: 322px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: auto;
 }
 
 .item .sub_title {
@@ -244,11 +273,11 @@ header .container,
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
-  margin-left: 24px;
 }
 
 .item .text {
-  margin-left: 24px;
+  margin-top: 4px;
+
   font-size: 16px;
   line-height: 1.88;
 }
@@ -257,15 +286,11 @@ header .container,
 
 /* Футер */
 
-footer {
-  background-color: var(--secondary-background);
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-footer .container {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-color: var(--secondary-background);
 }
 
 footer .studio {
@@ -282,6 +307,8 @@ footer .studio {
 }
 
 .address .link {
+  margin-top: 9px;
+
   color: rgba(255, 255, 255, 0.6);
 }
 
