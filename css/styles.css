@@ -238,7 +238,15 @@ header .studio {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
-  justify-content: space-around;
+  flex-basis: calc(100% / 3);
+
+  margin-top: 20px;
+  margin-left: -30px;
+}
+
+.portfolio .item {
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 .portfolio .button {
@@ -257,15 +265,12 @@ header .studio {
   color: var(--white-color);
 }
 
-.portfolio .item:nth-child(-n + 6) {
-  margin-bottom: 30px;
-}
-
 .item .description {
-  width: 322px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: auto;
+  padding: 20px 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .item .sub_title {
