@@ -132,6 +132,7 @@ header .studio {
   letter-spacing: 0.06em;
   color: var(--white-color);
   margin-top: 30px;
+  padding: 10px 32px;
 }
 
 .hero-section .button:hover,
@@ -221,6 +222,20 @@ header .studio {
 
 /* ++++++ Страница портфолио - начало +++++++*/
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .filter-button:not(:last-child) {
   margin-right: 8px;
 }
@@ -258,6 +273,7 @@ header .studio {
   border-radius: 4px;
   font-weight: 500;
   margin: 0;
+  padding: 6px 22px;
 }
 
 .portfolio .button:hover {
